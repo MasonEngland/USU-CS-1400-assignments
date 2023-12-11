@@ -1,0 +1,80 @@
+
+grid implementation
+
+
+make a cell size which will be 10
+
+grid sieze needs to be == to SCREEN_WIDTH // cell_size 
+
+Cell:
+
+    - draw_pos: list[2]
+    - screen: Surface
+    - image: Surface
+    - active: bool
+    - width: int 
+    - heigt: int
+--------------------------
+    + draw(): None 
+    + activate(player: Player, image: Surface, corner image: Surface): None
+    + did_hit(player): Null | String
+
+the draw() function will have the cell draw itself assuming its active, otherwise it needs not draw nothing 
+
+the activate function means to activat the cell so that it draws itself, also will deterimine the image 
+did_hit takes a player as a paramter and determines if the player is over an active cell, and if so returns the players color 
+
+Player:
+
+    - draw_pos: list[2]
+    - screen: Surface
+    - draw_factor: int # to keep player on the grid
+    - velocity: list[2]
+    - image: Surface
+    - color: String 
+
+--------------------------
+    + draw(): None
+    + move(): None
+    + get_pos(): list[2]
+    + did_hit_wall(dimensions: list): bool
+
+draw() draws the player to the screen
+get_pos() will allow the cells and main sections to get the players position 
+move() will work by ading the players velocity to the players position 
+move() will also read the keyboard 
+did_hit_wall() will take the dimesnsion of the screen and check 
+if the player has gone beyond the bounds of the 
+screen and returns True or False based on the results
+
+setup:  
+    start with the initial setup and loading all steps 
+
+    make a 2 dimensional array to make a game grid that covers the whole screen
+    will make it by using two for loops to create a list of lists 
+
+game loop:
+    check for quit event 
+
+    iterate through all cells in the game grid
+    for i in range(len(grid)):
+        for j in grid[i]:
+            call methods attached to individual cells 
+            check player/cell collisions
+    
+    iterate through players to call methods attached to players 
+    check player-wall collisions
+
+    if game_over:
+        display game_over screen
+        player game over music 
+
+    flip diplay 
+    tick the clock
+
+
+
+
+
+
+

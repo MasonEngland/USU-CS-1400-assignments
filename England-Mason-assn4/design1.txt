@@ -1,0 +1,53 @@
+#### Add Import Statement(s) as needed ####
+import drawly
+#### End Add Import Statement(s) ####
+
+def main():
+#### Add Code to get input from user ####
+width = input("What should the width be?: ")
+height = similar to width
+#### End Add Code to get input from user ####
+
+    if width == "" and height == "":
+        draw_chessboard(start_x, start_y)
+    elif height == "":
+        draw_chessboard(start_x, start_y, width=int(width))
+    elif width == "":
+        draw_chessboard(start_x, start_y, height=int(height))
+    else:
+        draw_chessboard(start_x, start_y, int(width), int(height))
+
+main()
+
+
+def draw_rectangle(x, y, width, height):
+    use drawly polygon here with the parameters of the function
+    I can probably use a ternary operator to get just one poly point.
+    drawly.draw()
+
+def draw_all_rectangles(start_x, start_y, width, height):
+    interval = maybe split the width and height into even intervals 
+    for i in range(interval):
+        rectange(i * interval)
+
+
+def draw_chessboard(x, y, width = 250, height = 250):
+    draw_rectangle(x, y, width, height)
+    draw_all_rectangles(x, y, width, height)
+
+
+the fallowing code allowed e to make a checker board patter with stars, I figure if I can do it with stars I can do it with rectangles right?
+
+def test(x, y, width, height):
+    interval_x = width / 10
+    interval_y = height /10
+    for i in range(round(interval_y)):
+        for j in range(round(interval_x)):
+            if j % 2 == 0:
+                print("*", end="")
+            else:
+                print(" ", end="")
+        print("\n") 
+
+test(20, 50, 300, 600)
+

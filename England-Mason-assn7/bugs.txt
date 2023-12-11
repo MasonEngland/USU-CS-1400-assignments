@@ -1,0 +1,37 @@
+insertion sort 
+
+is clearly sorting the cards by suit and not by rank
+
+for this part the main solutions is to change where it says "suite" to "rank"
+in any spots applicable
+
+selection sort
+
+clearly not correct 
+starting it tries to use the j variable when it is clearly out of scope 
+changing this to i fixed the issue
+
+the for loop also tried to access members of the list using the i index instead of
+the j index which meant it was retrieveing and comparing the wrong elements
+I changed the i to j here and it fixed the issue 
+
+bubble sort 
+
+the for loop was iterating by the length of the list - number of operations done 
+this made the sort end too early. instead you only need to subtract 1 from the 
+length of this list so tha the index doesn't go out of range
+
+linear search 
+
+all I could find was that the function was comparing and id to the card object 
+I fixed this by adding the get_id() method call 
+coudn't find many bugs but it works fine now
+
+binary search 
+
+program was entering into an infinite loop 
+found that the alorithm was setting mid to a new number instead of low and high 
+this meant that since low and high were never changing the while condition would never be met
+and thus the program would soft lock
+
+both comparative operations also neede to be switched after the elif statements

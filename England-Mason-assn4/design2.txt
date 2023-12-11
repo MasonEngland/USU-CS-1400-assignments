@@ -1,0 +1,26 @@
+There is a lot of starter code to work with so I will have to mostly worry about the patterns
+
+
+rectangle_pattern(x, y, offset, width, height, count, rotation):
+    base_angle = 360 / count
+
+    for i in range(count):
+        coords = get_distance_point(offset, base_angle * i) # hopefully this will spread the rectangles evenly
+        rectangle(coords[0], coords[1], width, height rotation= rotation)
+        draw()
+
+circle_patter(x, y, radius, offset, count): #this should be much simpler
+    base_angle = 360 / count 
+
+    for i in range(count):
+        coords = get_distance_point(radius + offset, base_angle * i) # same as last pattern
+        circle(coords[0], coords[1], radius)
+        draw()
+    
+draw_super_patter(num):
+    for i in range(num):
+        maybe get a random number of 0 or 1
+
+        maybe draw circle or rectangle based on this
+
+        draw_rectangle(pass in all randint values for both functions)

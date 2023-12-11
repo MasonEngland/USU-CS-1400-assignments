@@ -1,0 +1,29 @@
+Bunny catcher design game 
+
+
+while True:
+    check for boiler plate events 
+
+    for critter in critter_list:
+        call the move() and draw() methods 
+
+    get mouse buttons 
+
+    if left click is pressed then it will check for a collision with a critter 
+
+    check if the critter list is full, if not then game_over = True 
+
+
+    if mouse button is pressed and mouse is over correct critter then remove critter from critter_list
+
+    if mouse button is pressed and mouse is over incorrect critter then game_over = True 
+
+    if game_over:
+        keys = pygame.keys.get()
+        - display message with time 
+        if keys(pygame.K_RETURN):
+            - reset game data 
+            - game_over = False 
+
+
+        

@@ -1,0 +1,29 @@
+
+
+Coin Collection:
+
+    coin list = [coin ,coin, coin, coin, coin, coin, coin, coin, coin ,coin] 
+
+    for coin in coin list:
+        temp list = []
+        if not touching(player, coin):
+            temp list.append(coin)
+        coin list = temp list 
+
+def move_enemy(self): -- plan to make this func a method in a class
+    if moving toward wall and position is at or past wall:
+        velocity of axis touching wall = - axis touching wall 
+
+
+
+    self.x += velocity x
+    self.y += velocity y
+    repeat for center position as well 
+
+def move_player(self):
+
+    if moving toward and player position is at or touching wall:
+        stop velocity of that direction until player moves in different direction 
+
+    self.x += self.velocity x
+    self.y += self.velocity y 

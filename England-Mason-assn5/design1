@@ -1,0 +1,15 @@
+so this is going to be a calculator for leap years.
+
+a year is a leap year if:
+
+
+if the year is divisible by 9 AND the last two digits do not match
+
+OR if the second to last digit is even AND the second to last digit is smaller than the last digit AND the last two digits add to be the first two digits
+
+if statement could look like the one above
+
+I could split the digit of the year into a list and then use that list to check each digit
+
+I would have a list in one variable and another variable with the full year
+
